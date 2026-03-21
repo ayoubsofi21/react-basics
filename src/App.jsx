@@ -1,4 +1,10 @@
-const App = () => {
-  return <h1>Hello Ayoub</h1>;
-};
+import ThemeSelector from "./ThemeSelector";
+
+function App() {
+  return (
+    <>
+      <ThemeSelector />
+    </>
+  );
+}
 export default App;
