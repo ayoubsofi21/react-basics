@@ -1,5 +1,7 @@
 // import ThemeSelector from "./ThemeSelector";
+import { useState } from "react";
 import UserProfile from "./UserProfile";
+import SmartCounter from "./SmartCounter";
 
 function App() {
   const users = [
@@ -10,9 +12,31 @@ function App() {
   const usercomponent = [];
 
   for (let i = 0; i < users.length; i++) {
-    usercomponent.push(<UserProfile name={users[i].name} age={users[i].age} profession={users[i].profession}/>);
+    usercomponent.push(
+      <UserProfile
+        name={users[i].name}
+        age={users[i].age}
+        profession={users[i].profession}
+      />,
+    );
   }
+  //   challenge 4 increment decrement
 
+  const [counter, setCounter] = useState(0);
+  const increment = () => {
+    if (counter < 10) {
+      setCounter(counter + 1);
+    } else {
+      alert("Limite atteinte");
+    }
+  };
+  const decrement = () => {
+    if (counter > 0) {
+      setCounter(counter - 1);
+    } else {
+      alert("Limite atteinte");
+    }
+  };
   return (
     <>
       {/* <ThemeSelector />
@@ -30,6 +54,12 @@ function App() {
         })} */}
         {usercomponent}
       </div>
+      <hr className="border border-[5px] border-red-500 mt-4 " />
+      <SmartCounter
+        counter={counter}
+        increment={increment}
+        decrement={decrement}
+      />
     </>
   );
 }
