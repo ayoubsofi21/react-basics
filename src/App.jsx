@@ -2,6 +2,7 @@
 import { useState } from "react";
 import UserProfile from "./UserProfile";
 import SmartCounter from "./SmartCounter";
+import AjouteAuPanier from "./AjouteAuPanier";
 
 function App() {
   const users = [
@@ -52,14 +53,15 @@ function App() {
             />
           );
         })} */}
-        {usercomponent}
+        {/* {usercomponent} */}
       </div>
-      <hr className="border border-[5px] border-red-500 mt-4 " />
+      {/* <hr className="border border-[5px] border-red-500 mt-4 " />
       <SmartCounter
         counter={counter}
         increment={increment}
         decrement={decrement}
-      />
+      /> */}
+      <AjouteAuPanier />
     </>
   );
 }
