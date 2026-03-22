@@ -39,7 +39,7 @@ function App() {
     }
   };
   return (
-    <>
+    <div>
       {/* <ThemeSelector />
       <hr className="border border-[5px] border-red-500 mt-4 " /> */}
       <div>
@@ -62,7 +62,7 @@ function App() {
         decrement={decrement}
       /> */}
       <AjouteAuPanier />
-    </>
+    </div>
   );
 }
 export default App;
